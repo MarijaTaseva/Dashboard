@@ -36,7 +36,7 @@ export class BarChartComponent implements OnInit {
     .subscribe(res => {
       //console.log(res['page']['data']);
       const localChartData = this.getChartData(res);
-      console.log(localChartData);
+      //console.log(localChartData);
       this.barChartLabels = localChartData.map(x => x[0]).reverse();
       this.barChartData = [{'data': localChartData.map(x => x[1]), 'label': 'Sales'}];
     });
@@ -54,7 +54,7 @@ export class BarChartComponent implements OnInit {
 
     const p = [];
 
-    console.log('formatedOrders: ', formatedOrders);
+    //console.log('formatedOrders: ', formatedOrders);
 
     const chartData = formatedOrders.reduce((r, e) => {
       const key = e[0];
@@ -68,7 +68,7 @@ export class BarChartComponent implements OnInit {
       return r;
     }, []);
     
-    console.log('chartData: ', chartData);
+    //console.log('chartData: ', chartData);
     return chartData;
 
     //const myData = [3, 4, 5].reduce((sum, value) => { 
